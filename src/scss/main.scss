@@ -108,3 +108,30 @@ body {
         }
     }
 }
+
+.button {
+    padding: 1rem 1.4rem;
+    background-color: $color-purple;
+    border-radius: 0.3rem;
+    color: $color-yellow;
+    text-decoration: none;
+    margin-top: 5rem;
+    display: inline-block;
+    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2), 0 0.1rem 0.3rem rgba(0, 0, 0, 0.1);
+    min-width: 100%;
+
+    &:hover {
+        background-color: fade-out($color: $color-purple, $amount: 0.1);
+        color: darken($color: $color-yellow, $amount: 10%);
+    }
+
+    &:active {
+        transform: translateY(0.1rem);
+    }
+
+    @media ($md) {
+        min-width: auto;
+        padding: 1.5rem 2rem;
+        border-radius: 0.5rem;
+    }
+}
